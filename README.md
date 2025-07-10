@@ -224,15 +224,15 @@ http://localhost:3000
 
 Example contract deployment:
 
-![Ganache Contract Screenshot](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/ganace-contracct.png)
+![Ganache Contract Screenshot](images\con-g1.png)
 
 Metamask Connection:
 
-![Metamask Screenshot](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/meta-1.png)
+![Metamask Screenshot](images\meta-1.png)
 
 Ganache Account Import:
 
-![Ganache Account Import](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/con-g1.png)
+![Ganache Account Import](images\ganace-contracct.png)
 
 ---
 
