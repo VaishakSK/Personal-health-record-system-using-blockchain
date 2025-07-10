@@ -1,106 +1,267 @@
-# SwasthyaChain : Health Records Management Using Blockchain
+# ✅ **Personal Health Records Management Using Blockchain**
 
+> A decentralized framework to securely manage Electronic Health Records (EHR) using blockchain technology and off-chain storage for scalability.
 
-## Introduction
-The aim of this framework is firstly to implement blockchain technology for EHR and secondly to provide secure storage of electronic records by defining granular access rules for the users of the proposed framework. Moreover, this framework also discusses the scalability problem faced by the blockchain technology in general via use of off-chain storage of the records. This framework provides the EHR system with the benefits of having a scalable, secure and integral blockchain-based solution.
-<!-- TABLE OF CONTENTS -->
+---
 
+## 🚀 **Project Overview**
 
-## Application Demo Video  
+This framework implements a blockchain-based Electronic Health Records (EHR) system. It offers:
 
-[![Demo](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/YT.png)](https://youtu.be/ieBG1Hj8naA)
+* Granular access control for patients and healthcare providers
+* Secure and tamper-proof record storage
+* Scalability via off-chain data storage (using IPFS)
 
+The system leverages:
 
-## Installation
+* **Ethereum Smart Contracts** for access control
+* **IPFS** for decentralized storage
+* **Metamask** for blockchain interaction
+* **Ganache** for local blockchain testing
 
-The projects requires NodeJS and npm to work. Instructions to install all other dependencies are given below.
-### Node modules
+---
 
-1. Move to the project directory and open it in your terminal.
-2. Run `npm install` to install project dependenccties.
+## 📦 **Installation Prerequisites**
 
-### Ganache
+Ensure you have the following installed:
 
-1. Go to [Ganache homepage](https://truffleframework.com/ganache) and download. 
-2. If you are on Linux, you must have received an _.appimage_ file. Follow installation instructions available [here.](https://itsfoss.com/use-appimage-linux/)
+| Tool         | Purpose                                                 |
+| ------------ | ------------------------------------------------------- |
+| **Node.js**  | JavaScript runtime for the dApp                         |
+| **npm**      | Package manager for Node.js                             |
+| **Ganache**  | Local Ethereum blockchain                               |
+| **IPFS**     | Decentralized storage                                   |
+| **Metamask** | Browser extension for wallet and blockchain interaction |
 
-### IPFS
+---
 
-1. Go to the [github page](https://github.com/ipfs/ipfs-desktop) of IPFS and install IPFS Desktop
+## 🛠️ **Setup Instructions**
 
-### Local server
+### 1. Clone the Repository
 
-1. Install Node lite-server by running the following command on your terminal `npm install -g lite-server`
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+```
 
-### Metamask
+---
 
-1. Metamask is a browser extension available for Google Chrome, Mozilla Firefox and Brave Browser.
-2. Go to the this [link](http://metamask.io/) and add Metamask to your browser.
+### 2. Install Node Modules
 
-## Getting the dApp running
+Install dependencies for the dApp:
 
-### Configuration
+```bash
+npm install
+```
 
-#### 1. Ganache
-  - Open Ganache and click on settings in the top right corner.
-  - Under **Server** tab:
-    - Set Hostname to 127.0.0.1 -lo
-    - Set Port Number to 8545
-    - Enable Automine
-  - Under **Accounts & Keys** tab:
-    - Enable Autogenerate HD Mnemonic
+---
 
-#### 2. IPFS
-  - Fire up your terminal and run `ipfs init`
-  - Then run 
-    ```
-    ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "['*']"
-    ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials "['true']"
-    ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods "['PUT', 'POST', 'GET']"
-    ```
+### 3. Install Ganache
 
-    > Note: If you face any issues with the above command on windows, try using command prompt and escape sequences or git bash.
-#### 3. Metamask
-  - After installing Metamask, click on the metamask icon on your browser.
-  - Click on __TRY IT NOW__, if there is an announcement saying a new version of Metamask is available.
-  - Click on continue and accept all the terms and conditions after reading them.
-  - Stop when Metamask asks you to create a new password. We will come back to this after deploying the contract in the next section.
-  
-### Smart Contract
+* Download Ganache from [Ganache homepage](https://truffleframework.com/ganache).
+* For Linux:
 
-1. Install Truffle using `npm install truffle -g`
-2. Compile Contracts using `truffle compile`
+  * You’ll receive an `.appimage` file.
+  * Follow [these installation steps](https://itsfoss.com/use-appimage-linux/).
 
-#### 1. Starting your local development blockchain
-  - Open Ganache.
-  - Make sure to configure it the way mentioned above.
-  
-1. Open new Terminal and deploy contracts using `truffle migrate`
-2. Copy deployed contract address to src/app.js 
-![alt text](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/ganace-contracct.png)
+---
+
+### 4. Install IPFS Desktop
+
+* Download from the [IPFS GitHub page](https://github.com/ipfs/ipfs-desktop).
+* Install according to your OS instructions.
+
+---
+
+### 5. Install Lite Server
+
+For running the local dApp:
+
+```bash
+npm install -g lite-server
+```
+
+---
+
+### 6. Install Metamask Extension
+
+* Add Metamask to your browser from [Metamask.io](http://metamask.io/).
+* Available for:
+
+  * Google Chrome
+  * Firefox
+  * Brave Browser
+
+---
+
+## ⚙️ **Configuration Details**
+
+### ✅ Ganache
+
+1. Open Ganache.
+2. Click on **Settings**:
+
+   * **Server** tab:
+
+     * Hostname: `127.0.0.1`
+     * Port: `8545`
+     * Enable Automine
+   * **Accounts & Keys** tab:
+
+     * Enable Autogenerate HD Mnemonic
+
+---
+
+### ✅ IPFS Configuration
+
+Run the following commands in your terminal:
+
+```bash
+ipfs init
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials '["true"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST", "GET"]'
+```
+
+> ⚠️ **Windows Note:**
+> Use Command Prompt, Git Bash, or PowerShell if you encounter syntax errors.
+
+---
+
+### ✅ Metamask
+
+* Install the extension.
+* Click **TRY IT NOW** if prompted for the new version.
+* Accept terms and conditions.
+* Stop at the password creation screen for now. You’ll import accounts after deploying the contract.
+
+---
+
+## ✨ **Smart Contract Deployment**
+
+### 1. Install Truffle
+
+```bash
+npm install -g truffle
+```
+
+---
+
+### 2. Compile Contracts
+
+```bash
+truffle compile
+```
+
+---
+
+### 3. Start Ganache
+
+* Open Ganache and ensure settings match those above.
+
+---
+
+### 4. Deploy Contracts
+
+```bash
+truffle migrate
+```
+
+* Copy the deployed contract address and update it in `src/app.js`:
 
 ```js
-// app/src/app.js  line number 11
+// app/src/app.js  (Line 11)
 var agentContractAddress = '0x75E115394aacC7c6063E593B9292CB9417E4cbeC';
 ```
 
-3. If you change contents of any contract , replace existing deployment using `truffle migrate --reset`
-> Note :  reset of the contract will change the contract Address which needs to be updated in src/app.js
+* If you modify contracts, redeploy:
 
-### Running the dApp
+```bash
+truffle migrate --reset
+```
 
-#### 1. Connecting Metamask to our local blockchain
-  - Connect metamask to localhost:8485
-  - Click on import account
-  ![alt text](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/meta-1.png)
-  - Select any account from ganache and copy the private key to import account into metaMask
-  ![alt text](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/con-g1.png)
+> **Note:**
+> Resetting changes the contract address. Update `src/app.js` each time.
 
-#### 2. Starting IPFS 
-  - Start the IPFS Desktop Application
-  
-#### 3. Start a local server
-  - Open a new terminal window and navigate to `/YOUR_PROJECT_DIRECTORY/app/`.
-  - Run `npm start`.
-  - Open `localhost:3000` on your browser.
-  - That's it! The dApp is up and running locally.
+---
+
+## 🌐 **Running the dApp Locally**
+
+### 1. Connect Metamask to Local Blockchain
+
+* Connect Metamask to `localhost:8545`.
+* Click **Import Account**.
+* In Ganache, copy a private key from any account and paste it into Metamask to import the account.
+
+---
+
+### 2. Start IPFS Desktop
+
+Launch the IPFS Desktop application.
+
+---
+
+### 3. Launch the Local Server
+
+Navigate to the app directory and start the server:
+
+```bash
+cd /YOUR_PROJECT_DIRECTORY/app
+npm start
+```
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+🎉 **Your dApp is live locally!**
+
+---
+
+## 🖼️ **Screenshots**
+
+Example contract deployment:
+
+![Ganache Contract Screenshot](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/ganace-contracct.png)
+
+Metamask Connection:
+
+![Metamask Screenshot](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/meta-1.png)
+
+Ganache Account Import:
+
+![Ganache Account Import](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/con-g1.png)
+
+---
+
+## 💡 **Troubleshooting Tips**
+
+* **IPFS command errors (Windows):**
+  Try Git Bash or PowerShell with proper escape sequences.
+
+* **Contracts not deploying:**
+  Ensure Ganache is running and using the correct network settings.
+
+* **Metamask connection issues:**
+  Confirm Metamask is pointing to `localhost:8545`.
+
+---
+
+## 📚 **References**
+
+* [Metamask Official Website](https://metamask.io/)
+* [Truffle Suite Documentation](https://trufflesuite.com/docs/)
+* [Ganache Documentation](https://trufflesuite.com/ganache/)
+* [IPFS Documentation](https://docs.ipfs.io/)
+
+---
+
+## 🔒 **License**
+
+This project is intended for research and educational purposes. Ensure compliance with local data protection laws and blockchain regulations.
+
+---
+
+✨ **Happy coding and stay secure!** ✨
